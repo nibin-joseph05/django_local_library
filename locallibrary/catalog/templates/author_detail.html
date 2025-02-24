@@ -1,0 +1,7 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>{{ author.first_name }} {{ author.last_name }}</h1>
+  <p><strong>ID:</strong> {{ author.id }}</p>
+  <a href="{% url 'author-list' %}">Back to Author List</a>
+{% endblock %}
