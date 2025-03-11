@@ -35,7 +35,8 @@ DEBUG = True
 # DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 # Set hosts to allow any app on Railway and the local testing URL
-ALLOWED_HOSTS = ['https://django-local-library-wahm.onrender.com']
+ALLOWED_HOSTS = ["django-local-library-wahm.onrender.com"]
+
 
 # Set CSRF trusted origins to allow any app on Railway and the local testing URL
 CSRF_TRUSTED_ORIGINS = ['https://*.railway.app',
