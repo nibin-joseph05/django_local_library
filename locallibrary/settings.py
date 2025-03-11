@@ -35,7 +35,7 @@ DEBUG = True
 # DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 # Set hosts to allow any app on Railway and the local testing URL
-ALLOWED_HOSTS = ['.railway.app', '.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['https://django-local-library-wahm.onrender.com']
 
 # Set CSRF trusted origins to allow any app on Railway and the local testing URL
 CSRF_TRUSTED_ORIGINS = ['https://*.railway.app',
@@ -90,12 +90,12 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
 }
+
 
 
 # Password validation
